@@ -3,8 +3,8 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.5.
 
 ## API
-1. This app uses Firebase for userauthentication, and some elements will not work without API credentials. To sign up for Firebase go to `https://firebase.google.com/`.
-2.  Create a new project, and select `Add Firebase to your web app`
+1. This app uses Firebase for userauthentication, and some elements will not work without API credentials. [Get a Firebase account here.](https://firebase.google.com/)
+2. Create a new project, and select `Add Firebase to your web app`
 3. In `src/app` create a new file named `api-keys.ts` and use the following format:
 
         export const masterFirebaseConfig = {
@@ -20,7 +20,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `ng serve` for a dev server. Navigate to [http://localhost:4200/](http://localhost:4200/). The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 
