@@ -3,7 +3,7 @@
     <div class="col">
       <button class="btn btn-primary" (click)='showPropertyList()'>Property List</button>
       <div *ngIf='displayAllProperties' id="property-list">
-        <ul *ngFor='let property of propertyList'>
+        <ul *ngFor='let property of propertyList | async'>
           <li>
             <p>Type: {{property.type}}</p>
             <p>Beds: {{property.beds}}</p>

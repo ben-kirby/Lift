@@ -1,15 +1,17 @@
 import { Injectable } from '@angular/core';
 import { Property } from './models/property';
-import { propertyList } from './propertyList'; 
+import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 
 
 @Injectable()
 export class PropertyService {
-
-  constructor() { }
+  propertyList: FirebaseListObservable<any[]>;
+  constructor(private database: AngularFireDatabase) {
+    this.propertyList = database.list('properties');
+   }
 
   getPropertyList(){
-    return propertyList;
+    return this.propertyList;
   }
 
   addNew(type, beds, location){
