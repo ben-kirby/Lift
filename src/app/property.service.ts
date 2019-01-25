@@ -11,5 +11,7 @@ export class PropertyService {
   getPropertyList(){
     return propertyList;
   }
+
+  
 }
  

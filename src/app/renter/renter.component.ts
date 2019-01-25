@@ -9,9 +9,13 @@ import { PropertyService } from '../property.service';
   styleUrls: ['./renter.component.css'],
   providers: [PropertyService]
 })
-export class RenterComponent implements OnInit {
 
+
+export class RenterComponent implements OnInit {
   propertyList: Property[];
+  displayAllProperties = false;
+  displayNewPropertyForm = false;
+
 
   constructor(private router: Router, private propertyService: PropertyService) { }
 
@@ -19,4 +23,16 @@ export class RenterComponent implements OnInit {
     this.propertyList = this.propertyService.getPropertyList();
   }
 
+  showPropertyList() {
+    this.displayAllProperties = !this.displayAllProperties;
+  }
+
+  showNewPropertyForm() {
+    this.displayNewPropertyForm = !this.displayNewPropertyForm;
+  }
+
+  newProperty(propertyType, beds, location){
+    console.log(propertyType, beds, location);
+    
+  }
 }
