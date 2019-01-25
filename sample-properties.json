@@ -1,0 +1,18 @@
+{
+  "properties": [{
+      "type": "Apartment",
+      "beds": 4,
+      "location": "Portland"
+    },
+    {
+      "type": "House",
+      "beds": 2,
+      "location": "Bend"
+    },
+    {
+      "type": "House",
+      "beds": 6,
+      "location": "Gearhart"
+    }
+  ]
+}
