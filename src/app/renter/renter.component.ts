@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Property } from '../models/property';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-renter',
@@ -7,7 +9,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RenterComponent implements OnInit {
 
-  constructor() { }
+  propertyList: Property[];
+
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }

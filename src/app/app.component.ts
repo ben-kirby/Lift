@@ -8,7 +8,9 @@ import { Property } from './models/property';
 })
 export class AppComponent {
   title = 'app';
-  propertyList: Property[] = [
-    new Property("Apartment", 4, "Portland")
-  ]  
+  masterPropertyList: Property[] = [
+    new Property("Apartment", 4, "Portland"),
+    new Property("House", 2, "Bend"),
+    new Property("House", 6, "Gearhart")
+  ];
 }
