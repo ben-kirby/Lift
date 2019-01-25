@@ -7,10 +7,5 @@ import { Property } from './models/property';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
-  masterPropertyList: Property[] = [
-    new Property("Apartment", 4, "Portland"),
-    new Property("House", 2, "Bend"),
-    new Property("House", 6, "Gearhart")
-  ];
+  title = 'Loft';
 }

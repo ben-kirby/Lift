@@ -10,3 +10,10 @@
   </div>
 </div> -->
 
+<ul *ngFor='let property of propertyList'>
+  <li>
+    <p>Type: {{property.type}}</p>
+    <p>Beds: {{property.beds}}</p>
+    <p>Location: {{property.location}}</p>
+  </li>
+</ul>
