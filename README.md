@@ -4,23 +4,18 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## API
 1. This app uses Firebase for userauthentication, and some elements will not work without API credentials. To sign up for Firebase go to `https://firebase.google.com/`.
-   * Create a new project, and select `Add Firebase to your web app`
-2. In `src/app` create a new file named `api-keys.ts` and use the following format:
-   * `export const masterFirebaseConfig = {  
+2.  Create a new project, and select `Add Firebase to your web app`
+3. In `src/app` create a new file named `api-keys.ts` and use the following format:
 
-        apiKey: "xxxx", 
-
-        authDomain: "xxxx.firebaseapp.com",
-
-        authDomain: "xxxx.firebaseapp.com",
-
-        databaseURL: "https://xxxx.firebaseio.com",
-
-        projectId: "xxxx",
-
-        storageBucket: "xxxx.appspot.com",
-
-        messagingSenderId: "xxxx"}`
+        export const masterFirebaseConfig = {
+            apiKey: "xxxx", 
+            authDomain: "xxxx.firebaseapp.com",
+            authDomain: "xxxx.firebaseapp.com",
+            databaseURL: "https://xxxx.firebaseio.com",
+            projectId: "xxxx",
+            storageBucket: "xxxx.appspot.com",
+            messagingSenderId: "xxxx"
+        }
 
 
 ## Development server
