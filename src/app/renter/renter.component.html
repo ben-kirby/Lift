@@ -15,15 +15,23 @@
     <div class="col">
       <button class="btn btn-success" (click)='showNewPropertyForm()'>Add New Property</button>
       <div *ngIf='displayNewPropertyForm' class="form-group">
-        <form>
-          <input [(ngModel)]='propertyType' type="text" name="propertyType" class="form-control" placeholder="Property Type">
+        <div>
+          <label>Property Type:</label>
+          <input #newPropertyType>
+        </div>
+        <div>
+          <label>Beds:</label>
+          <input #newBeds>
+        </div>
 
-          <input [(ngModel)]='beds' type="number" min=1 name="beds" class="form-control" placeholder="Beds">
+        <div>
+          <label>Location:</label>
+          <input #newLocation>
+        </div>
 
-          <input [(ngModel)]='location' type="text" name="location" class="form-control" placeholder="Location">
-
-          <button class="btn btn-outline-success" (click)='newProperty(propertyType, beds, location)'>Add Property</button>
-        </form>
+        <button class="btn btn-outline-success" (click)="
+          newProperty(newPropertyType.value, newBeds.value, newLocation.value);newProperty.value=''; newBeds.value=''; newLocation.value=''">Add
+          Property</button>
       </div>
     </div>
   </div>
