@@ -12,6 +12,9 @@ export class PropertyService {
     return propertyList;
   }
 
+  addNew(type, beds, location){
+    propertyList.push(new Property(type, beds, location));
+  }
   
 }
  

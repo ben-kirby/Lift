@@ -32,7 +32,6 @@ export class RenterComponent implements OnInit {
   }
 
   newProperty(propertyType, beds, location){
-    console.log(propertyType, beds, location);
-    
+    this.propertyService.addNew(propertyType, beds, location);    
   }
 }
