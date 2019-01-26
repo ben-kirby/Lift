@@ -53,7 +53,7 @@ Run `ng generate component component-name` to generate a new component. You can 
 - Decide if I want to be an on demand plane rental company, or an investment property rental management company. 🤷🏻‍♂️
 - Additional functionality:
   - User-specific content
-  - Different user types (Renter vs guest, pilot vs passenger)
+  - Different user types (renter vs guest, pilot vs passenger)
 - More content
 - Additional styling for a more professional look
 
