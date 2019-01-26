@@ -15,8 +15,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 Run `ng serve` for a dev server. Navigate to [http://localhost:4200/](http://localhost:4200/). The app will automatically reload if you change any of the source files.
 
 #### API
-1. This app uses Firebase for user authentication and record management. Some elements will not work/render without proper API credentials. [Get a Firebase account here.](https://firebase.google.com/)
-2. Create a new project, and select `Add Firebase to your web app`
+This app uses Firebase for user authentication and record management. Some elements will not work/render without proper API credentials. 
+1. [Get a Firebase account here.](https://firebase.google.com/)
+2. Create a new project, and select `Add Firebase to your web app.`
 3. In `src/app` create a new file named `api-keys.ts` and use the following format:
 
         export const masterFirebaseConfig = {
