@@ -8,11 +8,10 @@
         logout.
         <a>{{userName}}</a>
         <br>
-        <a (click)="logout()">Log out</a>
-      </li>
+<button (click)="logout()">Logout</button>      </li>
       <li *ngIf="!isLoggedIn"> \\if the user isn’t logged in, we’ll have an event binding to login.
         <br>
-        <a (click)="login()">Log in</a>
+<button (click)="login()">Login</button>
       </li>
     </ul>
   </div>

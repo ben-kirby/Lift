@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Injectable } from '@angular/core';
 import { AuthenticationService } from '../authentication.service';
+import { Observable } from 'rxjs/Observable';
 
 @Component({
   selector: 'app-login',
@@ -7,12 +8,21 @@ import { AuthenticationService } from '../authentication.service';
   styleUrls: ['./login.component.css'],
   providers: [AuthenticationService]
 })
+
+// @Injectable()
 export class LoginComponent {
-  user;
+  private user: Observable<firebase.User>;
+  private isLoggedIn: boolean;
+  private userName: string;
 
   constructor(public authService: AuthenticationService) { 
     this.authService.user.subscribe(user => {
-      console.log(user);
+      if (user == null){
+        this.isLoggedIn = false;
+      } else {
+        this.isLoggedIn = true;
+        this.userName = user.displayName;
+      }
     });
   }
 
