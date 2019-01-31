@@ -16,6 +16,7 @@ import { AboutComponent } from './about/about.component';
 import { RenterComponent } from './renter/renter.component';
 import { GuestComponent } from './guest/guest.component';
 import { LoginComponent } from './login/login.component';
+import { AuthenticationComponent } from './authentication/authentication.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -35,7 +36,8 @@ export const firebaseConfig = {
     AboutComponent,
     RenterComponent,
     GuestComponent,
-    LoginComponent
+    LoginComponent,
+    AuthenticationComponent
   ],
   imports: [
     BrowserModule,

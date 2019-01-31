@@ -1,59 +1,32 @@
+.card{
+  top: 30%;
+  border: none;
+  margin: 20%
+}
+
+h1{
+  color: #474C62;
+}
+
+.card-img-top{
+  width: 30%;
+  padding-bottom: 15%;
+}
+
 #login-left{
   height: 100vh;
   width: 50vh;
   margin: 0px;
 }
 
-.card{
-  top: 30%;
-
-  border: none;
-  margin: 20%
-}
-.card-img-top{
-  width: 30%;
-  padding-bottom: 15%;
-}
-
-.row{
-  height: 100%;
-  width: 100%;
-  padding: 0px;
-  margin: 0px;
-}
-
-.col{
-  height: 100%;
-  width: 50%;
-  padding: 0px;
-  margin: 0px;
-}
-
-#login-logo{
-  height: 60px;
-}
-
-#login-box{
-  margin: auto;
-  top: 50%;
-  left: 25%;
-  transform: translate(0%, 50%);
-  position: relative;
-}
-
-
-
-
 #login-right{
   height: 100vh;
   width: 100%;
   float: right;
   margin: 0px;
-  background-image: url("https://picsum.photos/1000/1500");
+  background-image: url("./assets/images/erwan-hesry-674888-unsplash.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   position: relative;
-
-
 }

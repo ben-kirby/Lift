@@ -1,3 +1,10 @@
-body {
+.whole-page {
   background-color: #9EE5F2;
+  height: 100vh;
+}
+
+.row{
+  margin: auto;
+  height: auto;
+  width: 50%;
 }

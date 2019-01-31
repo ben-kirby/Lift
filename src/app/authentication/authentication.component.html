@@ -1,0 +1,15 @@
+    <form *ngIf="!isLoggedIn">
+      <div class="row">
+        <input id="email-input" [(ngModel)]="email" type="email" name="email" placeholder="Email">
+        <input id="password-input" [(ngModel)]="password" type="password" name="password" placeholder="Password">
+      </div>
+
+      <div class="row">
+        <button id="login-button" class="btn" (click)="login(email, password)"><strong>Login</strong></button>
+
+        <button id="signup-button" class="btn" (click)="signUp(email, password)"><strong>Sign Up</strong></button>
+      </div>
+
+    </form>
+
+    <button id="logout-button" class="btn" *ngIf="isLoggedIn" type="button" name="button" (click)="logout()"><strong>Logout</strong></button>

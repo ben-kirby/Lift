@@ -1,21 +1,19 @@
 <div id="login-page" class="row">
   <div id="login-left" class="col">
     <div class="card">
-      <img class="card-img-top" src="/assets/images/lift_pink.png" alt="">
+      <a href="">
+        <img class="card-img-top" src="/assets/images/lift_pink.png">
+      </a>
+      <h1 *ngIf="!isLoggedIn">Get a flight in seconds</h1>
+      <br>
       <div class="card-body">
-        <form *ngIf="!isLoggedIn">
-          <div class="row">
-            <input [(ngModel)]="email" type="email" name="email" placeholder="Email">
-            <input [(ngModel)]="password" type="password" name="password" placeholder="Password">
-          </div>
-          <div class="row">
-            <button class="btn" (click)="login(email, password)">Login</button>
-            <button class="btn" (click)="signUp(email, password)">Sign Up</button>
-          </div>
-        </form>
-        <button class="btn" *ngIf="isLoggedIn" type="button" name="button" (click)="logout()">Logout</button>
+        <app-authentication></app-authentication>
       </div>
     </div>
   </div>
-  <div id="login-right" class="col"></div>
+
+  <div id="login-right" class="col">
+  </div>
 </div>
+
+<strong></strong>
