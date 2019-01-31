@@ -49,13 +49,17 @@ This app uses Firebase for user authentication and record management. Some eleme
 - Currently I am getting linting errors for some of the specs. This should not interfere with development or deployment.
 
 ## Whats Next?
-- <strike>Decide if I want to be an on demand plane rental company, or an investment property rental management company. 🤷🏻‍♂️
+- <strike>Decide if I want to be an on demand plane rental company, or an investment property rental management company. 🤷🏻‍♂️ </strike>  It was planes ✈️
 - Change 'properties' in database to planes.
--
 - Additional functionality:
   - User-specific content
-  - Different user types (renter vs guest, pilot vs passenger)
+    - Passengers can track their rides.
+    - Pilots can view their plane details.
+  - Different user types (pilot vs passenger)
 - More content
+  - About section
+  - Pilot section
+  - Passenger section
 - <strike>Additional styling for a more professional look
 
 ## License
