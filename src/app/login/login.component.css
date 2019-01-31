@@ -1,0 +1,38 @@
+
+#login-left{
+  height: 100%;
+  width: 50%;
+  margin: 0px;
+}
+
+.row{
+  height: 100%;
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+}
+
+.col{
+  height: 100%;
+  width: 50%;
+  padding: 0px;
+  margin: 0px;
+}
+
+
+
+
+#login-box{
+  margin: auto;
+  box-shadow: 1px 1px 1px black;
+}
+
+
+
+
+#login-right{
+  float: right;
+  margin: 0px;
+
+  background-image: url("https://cdn.lyft.com/accountfrontend/sign_up_hero_image.5405fd02.jpg");
+}

@@ -7,5 +7,5 @@ import { Property } from './models/property';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Loft';
+  title = 'Lift';
 }
