@@ -13,24 +13,31 @@ export class LoginComponent {
   private user: Observable<firebase.User>;
   private isLoggedIn: boolean;
   private userName: string;
+  private uid: string;
+  public error: null;
 
-  constructor(public authService: AuthenticationService) { 
-    this.authService.user.subscribe(user => {
+  constructor(public auth: AuthenticationService) {
+    this.auth.user.subscribe(user => {
       if (user == null){
         this.isLoggedIn = false;
       } else {
         this.isLoggedIn = true;
         this.userName = user.displayName;
+        this.uid = user.uid;
       }
     });
   }
 
-  login(){
-    this.authService.login();
+  login(email, password){
+    this.auth.login(email, password);
+  }
+
+  signUp(email, password){
+    this.auth.signUp(email, password);
   }
 
   logout(){
-    this.authService.logout();
+    this.auth.logout();
   }
 
 }

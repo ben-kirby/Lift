@@ -1,21 +1,21 @@
-  <div id="login-page" class="row">
-    <div id="login-left" class="col">
-      <div id="login-box">
-        <p *ngIf="isLoggedIn"> \\if the user is logged in, we’ll show that user’s name along with an event binding to
-          logout.
-          <a>{{userName}}</a>
-          <br>
-          <button (click)="logout()">Logout</button>
-        </p>
-        <p *ngIf="!isLoggedIn"> \\if the user isn’t logged in, we’ll have an event binding to login.
-          <br>
-          <button (click)="login()">Login</button>
-        </p>
+<div id="login-page" class="row">
+  <div id="login-left" class="col">
+    <div class="card">
+      <img class="card-img-top" src="/assets/images/lift_pink.png" alt="">
+      <div class="card-body">
+        <form *ngIf="!isLoggedIn">
+          <div class="row">
+            <input [(ngModel)]="email" type="email" name="email" placeholder="Email">
+            <input [(ngModel)]="password" type="password" name="password" placeholder="Password">
+          </div>
+          <div class="row">
+            <button class="btn" (click)="login(email, password)">Login</button>
+            <button class="btn" (click)="signUp(email, password)">Sign Up</button>
+          </div>
+        </form>
+        <button class="btn" *ngIf="isLoggedIn" type="button" name="button" (click)="logout()">Logout</button>
       </div>
     </div>
-
-
-    <div id="login-right" class="col">
-
-    </div>
   </div>
+  <div id="login-right" class="col"></div>
+</div>

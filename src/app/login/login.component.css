@@ -1,8 +1,18 @@
-
 #login-left{
-  height: 100%;
-  width: 50%;
+  height: 100vh;
+  width: 50vh;
   margin: 0px;
+}
+
+.card{
+  top: 30%;
+
+  border: none;
+  margin: 20%
+}
+.card-img-top{
+  width: 30%;
+  padding-bottom: 15%;
 }
 
 .row{
@@ -19,20 +29,31 @@
   margin: 0px;
 }
 
-
-
+#login-logo{
+  height: 60px;
+}
 
 #login-box{
   margin: auto;
-  box-shadow: 1px 1px 1px black;
+  top: 50%;
+  left: 25%;
+  transform: translate(0%, 50%);
+  position: relative;
 }
 
 
 
 
 #login-right{
+  height: 100vh;
+  width: 100%;
   float: right;
   margin: 0px;
+  background-image: url("https://picsum.photos/1000/1500");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
 
-  background-image: url("https://cdn.lyft.com/accountfrontend/sign_up_hero_image.5405fd02.jpg");
+
 }

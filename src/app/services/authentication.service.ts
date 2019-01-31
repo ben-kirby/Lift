@@ -7,16 +7,20 @@ import * as firebase from 'firebase/app'
 export class AuthenticationService {
   user: Observable<firebase.User>;
 
-  constructor(public afAuth: AngularFireAuth) { 
+  constructor(public afAuth: AngularFireAuth) {
     this.user = afAuth.authState;
-  }
-
-  login(){
-    this.afAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
   }
 
   logout(){
     this.afAuth.auth.signOut();
+  }
+
+  login(email, password){
+    this.afAuth.auth.signInWithEmailAndPassword(email, password)
+  }
+
+  signUp(email, password){
+    this.afAuth.auth.createUserWithEmailAndPassword(email, password)
   }
 
 }
