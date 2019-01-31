@@ -1,1 +1,34 @@
 /* @import "~bootstrap/dist/css/bootstrap.css"; */
+.navbar {
+  border-bottom: 1px solid #1C52A2;
+}
+
+#navbar {
+  background-color: #9EE5F2;
+}
+
+#navbar-logo {
+  height: 40px;
+}
+
+.nav-link {
+  color: #1C52A2;
+
+}
+
+.nav-item {
+  padding-left: 10px;
+  padding-right: 10px;
+
+}
+
+
+body {
+  background-color: #9EE5F2;
+}
+
+#welcome-image-header {
+    margin-top: 5%;
+    margin: auto;
+    height: 500px;
+}

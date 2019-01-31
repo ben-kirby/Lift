@@ -1,5 +1,5 @@
 import { Component, OnInit, Injectable } from '@angular/core';
-import { AuthenticationService } from '../authentication.service';
+import { AuthenticationService } from '../services/authentication.service';
 import { Observable } from 'rxjs/Observable';
 
 @Component({
@@ -9,7 +9,6 @@ import { Observable } from 'rxjs/Observable';
   providers: [AuthenticationService]
 })
 
-// @Injectable()
 export class LoginComponent {
   private user: Observable<firebase.User>;
   private isLoggedIn: boolean;
