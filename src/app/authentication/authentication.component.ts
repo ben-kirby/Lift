@@ -1,7 +1,10 @@
 import { Component, OnInit, Injectable } from '@angular/core';
-import { AuthenticationService } from "../services/authentication.service";
+import { AuthenticationService } from '../services/authentication.service';
 import { Observable } from 'rxjs/Observable';
 import { $ } from 'protractor';
+
+import { BehaviorSubject } from 'rxjs/BehaviorSubject';
+
 
 @Component({
   selector: 'app-authentication',
@@ -11,13 +14,16 @@ import { $ } from 'protractor';
 })
 
 export class AuthenticationComponent {
-  private user: Observable<firebase.User>;
+  user: BehaviorSubject<User> = new BehaviorSubject(null);
   private isLoggedIn: boolean;
   private userName: string;
   private uid: string;
   public error: null;
 
   constructor(public auth: AuthenticationService) {
+    
+
+
     this.auth.user.subscribe(user => {
       if (user == null) {
         this.isLoggedIn = false;
