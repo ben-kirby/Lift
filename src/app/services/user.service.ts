@@ -6,13 +6,14 @@ import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 
 @Injectable()
 export class UserService {
-  private currentUser: null;
+  constructor(private auth: AuthenticationService, private db: AngularFireDatabase) { }
 
-    constructor(public auth: AuthenticationService){
-      this.currentUser = auth.data.subsc
-    }
-
-
-
-
+  findUserProfile(uid) {
+    console.log("Hello")
+  }
 }
+
+
+
+
+
