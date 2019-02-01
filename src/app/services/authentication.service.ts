@@ -18,11 +18,7 @@ export class AuthenticationService {
 
   user: BehaviorSubject<User> = new BehaviorSubject(null);
 
-  constructor(
-    private afAuth: AngularFireAuth,
-    private db: AngularFireDatabase,
-    private router: Router) {
-
+  constructor(private afAuth: AngularFireAuth, private db: AngularFireDatabase, private router: Router) {
     this.afAuth.authState.switchMap(auth => {
       if (auth) {
         return this.db.object('users/' + auth.uid);
@@ -43,9 +39,6 @@ export class AuthenticationService {
         });
     } catch (e) {
       return false;
-
-
-      // this.signUp(email, password);
     }
   }
 
@@ -67,7 +60,11 @@ export class AuthenticationService {
   signUp(email, password) {
     this.afAuth.auth.createUserWithEmailAndPassword(email, password)
       .then(credendial => {
-
+        const userData = {
+          uid: credendial.uid,
+          email: credendial.email
+        };
+        this.db.list('users').push(new User(userData));
       });
   }
 

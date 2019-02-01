@@ -31,6 +31,7 @@ export class AuthenticationComponent {
   }
 
   login(email, password) {
+    this.auth.login(email)
     if (this.auth.login(email, password) === false) {
       this.userNotFound = true;
     }
