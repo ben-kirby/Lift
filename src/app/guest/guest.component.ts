@@ -21,7 +21,7 @@ export class GuestComponent implements OnInit {
         this.isLoggedIn = false;
       } else {
         this.isLoggedIn = true;
-        this.userName = user.displayName;
+        this.userName = user.name;
       }
     });
   }

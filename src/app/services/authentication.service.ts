@@ -3,7 +3,7 @@ import { AngularFireDatabase } from 'angularfire2/database'
 import { AngularFireAuth } from 'angularfire2/auth';
 import { Router } from '@angular/router'
 import * as firebase from 'firebase/app'
-import { Pilot, Passenger } from '../authentication/authentication.component';
+import { User } from '../authentication/authentication.component';
 
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 import { Observable } from 'rxjs/Observable';
@@ -48,7 +48,8 @@ export class AuthenticationService {
   }
 
   private updateUser(authData){
-    const userData = new userData(authData);
+    
+    const userData = new User(authData);
     const ref = this.db.object('users/' + authData.uid)
     ref.take(1)
       .subscribe(user => {

@@ -23,7 +23,7 @@ export class AuthenticationComponent {
         this.isLoggedIn = false;
       } else {
         this.isLoggedIn = true;
-        this.userName = user.displayName;
+        this.userName = user.name;
         this.uid = user.uid;
       }
     });
@@ -46,10 +46,9 @@ export interface Roles {
   reader: boolean;
   admin?: boolean;
   pilot?: boolean;
-  passenger?: boolean;
 }
 
-export class Pilot {
+export class User {
   uid: string;
   email: string;
   name: string;
@@ -61,26 +60,8 @@ export class Pilot {
     this.name = authData.displayName;
     this.role = {
       reader: true,
-      pilot: true
+      pilot: false
     }
   }
 }
-
-export class Passenger {
-  uid: string;
-  email: string;
-  name: string;
-  role: Roles;
-
-  constructor(authData) {
-    this.uid = authData.uid;
-    this.email = authData.email;
-    this.name = authData.displayName;
-    this.role = {
-      reader: true,
-      passenger: true
-    }
-  }
-}
-
 
