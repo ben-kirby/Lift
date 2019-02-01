@@ -1,9 +1,19 @@
 import { Component, OnInit, Injectable } from '@angular/core';
-import { AuthenticationService } from '../services/authentication.service';
-import { Observable } from 'rxjs/Observable';
-import { $ } from 'protractor';
+import { AngularFireDatabase } from 'angularfire2/database';
+import { AngularFireAuth } from 'angularfire2/auth';
+import { Router } from '@angular/router';
+import * as firebase from 'firebase/app';
 
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
+import { Observable } from 'rxjs/Observable';
+import { AuthenticationService } from '../services/authentication.service';
+import 'rxjs/add/observable/of';
+import 'rxjs/add/operator/switchMap';
+import 'rxjs/add/operator/take';
+import { $ } from 'protractor';
+
+
+
 
 
 @Component({
@@ -14,14 +24,22 @@ import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 })
 
 export class AuthenticationComponent {
-  user: BehaviorSubject<User> = new BehaviorSubject(null);
   private isLoggedIn: boolean;
   private userName: string;
   private uid: string;
   public error: null;
 
   constructor(public auth: AuthenticationService) {
-    
+    this.afAuth.authState.switchMap(auth => {
+      if (auth) {
+        return this.db.object('users/' + auth.uid);
+      } else {
+        return Observable.of(null);
+      }
+    })
+      .subscribe(user => {
+        this.user.next(user);
+      });
 
 
     this.auth.user.subscribe(user => {
@@ -45,29 +63,6 @@ export class AuthenticationComponent {
 
   logout() {
     this.auth.logout();
-  }
-}
-
-export interface Roles {
-  reader: boolean;
-  admin?: boolean;
-  pilot?: boolean;
-}
-
-export class User {
-  uid: string;
-  email: string;
-  name: string;
-  role: Roles;
-
-  constructor(authData) {
-    this.uid = authData.uid;
-    this.email = authData.email;
-    this.name = authData.displayName;
-    this.role = {
-      reader: true,
-      pilot: false
-    }
   }
 }
 
