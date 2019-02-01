@@ -16,7 +16,7 @@ import 'rxjs/add/operator/switchMap';
 @Injectable()
 export class AuthenticationService {
 
-  user: BehaviorSubject<User> = new BehaviorSubject(null);
+  public user: BehaviorSubject<User> = new BehaviorSubject(null);
 
   constructor(private afAuth: AngularFireAuth, private db: AngularFireDatabase, private router: Router) {
     this.afAuth.authState.switchMap(auth => {
