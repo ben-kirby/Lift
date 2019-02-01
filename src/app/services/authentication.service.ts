@@ -36,10 +36,17 @@ export class AuthenticationService {
   }
 
   login(email, password) {
-    return this.afAuth.auth.signInWithEmailAndPassword(email, password)
-      .then(credential => {
-        this.updateUser(credential.user);
-      });
+    try {
+      throw this.afAuth.auth.signInWithEmailAndPassword(email, password)
+        .then(credential => {
+          this.updateUser(credential.user);
+        });
+    } catch (e) {
+      return false;
+
+
+      // this.signUp(email, password);
+    }
   }
 
 
@@ -58,7 +65,10 @@ export class AuthenticationService {
   }
 
   signUp(email, password) {
-    this.afAuth.auth.createUserWithEmailAndPassword(email, password);
+    this.afAuth.auth.createUserWithEmailAndPassword(email, password)
+      .then(credendial => {
+
+      });
   }
 
 }

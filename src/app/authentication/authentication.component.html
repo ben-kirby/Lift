@@ -4,8 +4,15 @@
         <input id="password-input" [(ngModel)]="password" type="password" name="password" placeholder="Password">
       </div>
 
-      <div class="row">
+      <div *ngIf='!userNotFound' class="row">
         <button id="login-button" class="btn" (click)="login(email, password)"><strong>Login</strong></button>
+
+        <button id="signup-button" class="btn" (click)="signUp(email, password)"><strong>Sign Up</strong></button>
+      </div>
+      <div *ngIf='userNotFound' class="row">
+        <p>
+          User not found! Want to sign up?
+        </p>
 
         <button id="signup-button" class="btn" (click)="signUp(email, password)"><strong>Sign Up</strong></button>
       </div>

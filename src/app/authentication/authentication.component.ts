@@ -16,6 +16,7 @@ export class AuthenticationComponent {
   private userName: string;
   private uid: string;
   public error: null;
+  userNotFound: boolean;
 
   constructor(public auth: AuthenticationService) {
     this.auth.user.subscribe(user => {
@@ -30,15 +31,18 @@ export class AuthenticationComponent {
   }
 
   login(email, password) {
-    this.auth.login(email, password);
+    if (this.auth.login(email, password) === false) {
+      this.userNotFound = true;
+    }
   }
 
   signUp(email, password) {
+    this.userNotFound = false;
     this.auth.signUp(email, password);
   }
 
   logout() {
-    console.log(this.user);
+    this.userNotFound = false;
     this.auth.logout();
   }
 }
