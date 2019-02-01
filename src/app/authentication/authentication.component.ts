@@ -13,8 +13,6 @@ import { $ } from 'protractor';
 export class AuthenticationComponent {
   user: Observable<firebase.User>;
   private isLoggedIn: boolean;
-  private userName: string;
-  private uid: string;
   public error: null;
   userNotFound: boolean;
 
@@ -24,14 +22,11 @@ export class AuthenticationComponent {
         this.isLoggedIn = false;
       } else {
         this.isLoggedIn = true;
-        this.userName = user.name;
-        this.uid = user.uid;
       }
     });
   }
 
   login(email, password) {
-    this.auth.login(email)
     if (this.auth.login(email, password) === false) {
       this.userNotFound = true;
     }
