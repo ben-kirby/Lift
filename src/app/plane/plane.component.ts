@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from '../services/user.service';
 import { AuthenticationService } from '../services/authentication.service';
 
 @Component({
@@ -8,8 +9,12 @@ import { AuthenticationService } from '../services/authentication.service';
 })
 export class PlaneComponent implements OnInit {
 
-  constructor() { }
+  constructor(private userService: UserService) { }
 
+  testFunction(){
+    console.log("hello");
+
+  }
 
   ngOnInit() {
   }
