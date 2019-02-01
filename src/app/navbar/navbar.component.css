@@ -24,3 +24,11 @@
   margin-right: 2.5%;
 
 }
+
+#modal-logo{
+  width: 30%;
+  padding-bottom: 5%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

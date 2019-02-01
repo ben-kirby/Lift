@@ -16,11 +16,11 @@ export class AuthenticationService {
   }
 
   login(email, password){
-    this.afAuth.auth.signInWithEmailAndPassword(email, password)
+    this.afAuth.auth.signInWithEmailAndPassword(email, password);
   }
 
   signUp(email, password){
-    this.afAuth.auth.createUserWithEmailAndPassword(email, password)
+    this.afAuth.auth.createUserWithEmailAndPassword(email, password);
   }
 
 }

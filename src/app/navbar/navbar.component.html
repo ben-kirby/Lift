@@ -10,16 +10,27 @@
     <ul id="nav-items" class="navbar-nav ml-auto">
       <li class="nav-item">
         <a *ngIf="isLoggedIn" class="nav-link" routerLink="renter"><strong>PILOT (Logged In)</strong></a>
-        <a class="nav-link" routerLink="renter"><strong>PILOT (Not Logged In)</strong></a>
+        <a *ngIf="!isLoggedIn" data-toggle="modal" data-target="#login-modal" class="nav-link" routerLink="login"><strong>PILOT (Not Logged In)</strong></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" routerLink="guest"><strong>PASSENGER</strong></a>
       </li>
       <li class="nav-item">
-        <a *ngIf="isLoggedIn" class="nav-link" routerLink="login"><strong>LOGIN</strong></a>
-        <a *ngIf="!isLoggedIn" class="nav-link" routerLink="login"><strong>Logout</strong></a>
+        <a *ngIf="isLoggedIn" class="nav-link" routerLink="login"><strong>Log Out</strong></a>
+        <a *ngIf="!isLoggedIn" class="nav-link" routerLink="login"><strong>Log In</strong></a>
       </li>
     </ul>
   </div>
   <hr>
 </nav>
+
+<div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-lg modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <img id="modal-logo" src="./assets/images/lift_pink.png" alt="">
+        <app-authentication></app-authentication>
+      </div>
+    </div>
+  </div>
+</div>
