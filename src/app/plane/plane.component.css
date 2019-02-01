@@ -1,0 +1,20 @@
+.hero {
+  background-color: #FFD6E5;
+  height: 30%;
+  margin-top: auto;
+  min-height: 600px;
+  display: flex;
+  padding-top: 5.5rem;
+  padding-bottom: 5rem;
+}
+
+#become-pilot {
+  background-color: #5245C2;
+  border: none;
+  color: #FFFFFF;
+  margin-top: 2.5rem;
+  padding: 1rem 4rem;
+  font-weight: 700;
+  box-shadow: 0 5px 0 rgba(17, 17, 31, 0.25);
+  border-radius: 99999rem;
+}
