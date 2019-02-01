@@ -5,15 +5,15 @@ import { AuthenticationService } from '../services/authentication.service';
 @Component({
   selector: 'app-plane',
   templateUrl: './plane.component.html',
-  styleUrls: ['./plane.component.css']
+  styleUrls: ['./plane.component.css'],
+  providers: [AuthenticationService]
 })
 export class PlaneComponent implements OnInit {
 
   constructor(private userService: UserService) { }
 
   testFunction(){
-    console.log("hello");
-
+    console.log('hello');
   }
 
   ngOnInit() {
