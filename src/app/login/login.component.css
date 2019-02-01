@@ -1,30 +1,34 @@
-.card{
+.card {
   top: 30%;
   border: none;
   margin: 20%
 }
 
-h1{
+h1 {
   color: #474C62;
 }
 
-.card-img-top{
+.card-img-top {
   width: 30%;
   padding-bottom: 15%;
 }
 
-#login-left{
+#login-left {
   height: 100vh;
   width: 50vh;
   margin: 0px;
 }
 
-#login-right{
+#login-right {
+
   height: 100vh;
   width: 100%;
   float: right;
   margin: 0px;
-  background-image: url("./assets/images/erwan-hesry-674888-unsplash.jpg");
+  background-image: linear-gradient(-45deg,
+  rgba(0, 0, 0, 0.75),
+  rgba(255, 255, 255, 0.205)),
+    url("./assets/images/erwan-hesry-674888-unsplash.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
