@@ -6,10 +6,17 @@ import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 
 @Injectable()
 export class UserService {
-  constructor(private auth: AuthenticationService, private db: AngularFireDatabase) { }
+  constructor(private auth: AuthenticationService, ) { }
+
+  const db = firebase.database()
+  const userDb = db.child('users');
 
   findUserProfile(uid) {
-    console.log("Hello")
+    const user = this.userDb.orderByKey().;
+
+
+
+
   }
 }
 

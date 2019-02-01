@@ -12,7 +12,6 @@ import { masterFirebaseConfig } from './api-keys';
 import { AppComponent } from './app.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { AboutComponent } from './about/about.component';
 import { LoginComponent } from './login/login.component';
 import { AuthenticationComponent } from './authentication/authentication.component';
 import { PlaneComponent } from './plane/plane.component';
@@ -32,7 +31,6 @@ export const firebaseConfig = {
     AppComponent,
     WelcomeComponent,
     NavbarComponent,
-    AboutComponent,
     LoginComponent,
     AuthenticationComponent,
     PlaneComponent

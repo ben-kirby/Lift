@@ -2,7 +2,6 @@ import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { WelcomeComponent } from './welcome/welcome.component';
-import { AboutComponent } from './about/about.component';
 import { LoginComponent } from './login/login.component';
 import { PlaneComponent } from './plane/plane.component';
 
@@ -12,15 +11,11 @@ const appRoutes: Routes = [
         component: WelcomeComponent
     },
     {
-        path: "about",
-        component: AboutComponent
-    },
-    {
-        path: "planes",
+        path: 'planes',
         component: PlaneComponent
     },
     {
-        path: "login",
+        path: 'login',
         component: LoginComponent
     }
 ];

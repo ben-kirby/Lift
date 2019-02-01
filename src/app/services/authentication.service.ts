@@ -62,7 +62,9 @@ export class AuthenticationService {
       .then(credendial => {
         const userData = {
           uid: credendial.uid,
-          email: credendial.email
+          email: credendial.email,
+          planes: [],
+          rides: []
         };
         this.db.list('users').push(new User(userData));
       });
